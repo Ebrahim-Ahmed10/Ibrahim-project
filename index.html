@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise Admin Dashboard</title>
+    <!-- FontAwesome for professional icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- JS File -->
+    <link rel="stylesheet" href="script.js" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <h2><i class="fa-solid fa-layer-group"></i> MegaControl</h2>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="active">
+            <a href="#"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-industry"></i> Production</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-gears"></i> Automation</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-users"></i> Team Members</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-sliders"></i> Settings</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Top Navbar -->
+        <header class="top-navbar">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              placeholder="Search analytics, tasks, or logs..."
+            />
+          </div>
+          <div class="user-profile">
+            <i class="fa-solid fa-bell notification-badge"></i>
+            <div class="profile-info">
+              <span class="user-name">M. Oliver</span>
+              <span class="user-role">Administrator</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="content-body">
+          <div class="welcome-banner">
+            <h1>Welcome Back, Oliver Dashboard Overview</h1>
+            <p>
+              Monitor your automated workflows, production efficiency, and
+              system logistics in real-time.
+            </p>
+          </div>
+
+          <!-- Analytics Cards Grid -->
+          <section class="metrics-grid">
+            <div class="metric-card">
+              <div class="card-icon blue"><i class="fa-solid fa-bolt"></i></div>
+              <div class="card-data">
+                <h3>Automation Tasks</h3>
+                <p class="number">1,248</p>
+                <span class="trend positive"
+                  ><i class="fa-solid fa-arrow-up"></i> +12% this week</span
+                >
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="card-icon green">
+                <i class="fa-solid fa-industry"></i>
+              </div>
+              <div class="card-data">
+                <h3>Factory Efficiency</h3>
+                <p class="number">94.2%</p>
+                <span class="trend positive"
+                  ><i class="fa-solid fa-arrow-up"></i> Optimal</span
+                >
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="card-icon orange">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <div class="card-data">
+                <h3>Pending Alerts</h3>
+                <p class="number">3</p>
+                <span class="trend negative"
+                  ><i class="fa-solid fa-arrow-down"></i> Requires
+                  attention</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- Data Table Section (Where the real skill shows) -->
+          <section class="data-table-section">
+            <div class="table-header">
+              <h2>Recent Operational Workflows</h2>
+              <button class="btn-refresh">
+                <i class="fa-solid fa-rotate"></i> Refresh Data
+              </button>
+            </div>
+            <div class="table-responsive">
+              <table class="mega-table">
+                <thead>
+                  <tr>
+                    <th>Workflow ID</th>
+                    <th>Process Name</th>
+                    <th>Trigger Source</th>
+                    <th>Status</th>
+                    <th>Execution Time</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#TR-8821</td>
+                    <td><strong>Task Tracker Automation</strong></td>
+                    <td><span class="badge source">n8n Webhook</span></td>
+                    <td><span class="badge status-success">Success</span></td>
+                    <td>2 mins ago</td>
+                    <td>
+                      <button class="btn-action">
+                        <i class="fa-solid fa-ellipsis"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#PR-4402</td>
+                    <td><strong>Machinery Calibration Catalog</strong></td>
+                    <td><span class="badge source">Manual Sync</span></td>
+                    <td><span class="badge status-pending">Pending</span></td>
+                    <td>1 hour ago</td>
+                    <td>
+                      <button class="btn-action">
+                        <i class="fa-solid fa-ellipsis"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#ER-1094</td>
+                    <td><strong>Email Notification Dispatcher</strong></td>
+                    <td><span class="badge source">System Cron</span></td>
+                    <td><span class="badge status-failed">Failed</span></td>
+                    <td>5 hours ago</td>
+                    <td>
+                      <button class="btn-action btn-delete">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
